@@ -1,0 +1,179 @@
+
+@media (min-width:600px){
+
+    .home-container {
+        display:grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: 15vh 80vh minmax(100vh, auto) 12vh;
+        grid-template-areas: 
+            "header header header"  
+            "hero hero hero" 
+            "posts posts posts" 
+            "footer footer footer"
+        ;
+        font-family: 'Source Sans Pro';
+    }
+
+    /***********************
+        Header
+    ************************/
+
+    .header {
+        grid-area: header; 
+        padding: 0rem 3rem;
+        gap:1rem;
+    }
+
+    .header img {
+       width: 150px;
+    }
+
+    .header ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: start;
+        font-weight: bold;
+
+        padding:0;
+        margin:0;
+    }
+
+    .header ul li {
+        font-size: 1rem;
+    }
+
+    /***********************
+        Hero
+    ************************/
+    .hero { 
+        grid-area:hero; 
+        width:100%;
+        height:100%;
+        background-color: black;
+        background-image: url("../../img/article-image-hero.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        transition: all 2s ease-in-out;
+    }
+
+    .hero:hover {
+        background-position: center;
+    }
+
+    .hero a:hover > * {
+        color: var(--yellow) !important;
+        opacity: 0.9;
+        transition: all 1s ease;
+    }
+
+    .hero h1 {
+        font-weight: 800;
+        font-size:3rem;
+        color:white;
+        line-height: 1;
+        padding:0;
+        margin-top:0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero time {
+        color:white;
+        margin:0;
+        padding:0;
+    }
+
+    .hero p {
+        padding:0;
+        margin:0;
+        color:white;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        width:70%;
+    }
+
+    /***********************
+        Posts
+    ************************/
+    .posts { 
+        grid-area: posts; 
+        width:100%;
+        margin:1rem auto;
+        padding:2rem;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+
+    .post {
+        width: 290px;
+        height:70vh;
+        margin-bottom: 0.5rem;
+        border-radius: 25px;
+        box-shadow: var(--shadow);
+    }
+
+    .post img {
+        width:100%;
+        height:50%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        object-fit: cover;
+        object-position: top;
+        transition: all 1s ease-in-out;
+    }
+
+    .post img:hover {
+        object-position: center;
+    }
+
+    .post time, .post h2, .post p {
+        padding: 0 0.5rem;
+    }
+
+    .post time {
+        margin: 0;
+        font-size: 0.88rem;
+    }
+
+    .post h2 {
+        margin:0; 
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .post p {
+        margin:0;
+        font-size: 1rem;
+    }
+
+
+    /***********************
+        Footer
+    ************************/
+    .footer { 
+        grid-area:footer; 
+        background-color: var(--dark);
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:whitesmoke;
+        font-size: 0.7rem;
+    }
+
+    .footer h2 {
+        color:white;
+        margin:0;
+        font-size: 1.1rem;
+    }
+
+
+
+}

@@ -1,0 +1,227 @@
+@media (min-width:600px){ 
+
+    .detail-container {
+        display:grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: 15vh minmax(80vh, auto) minmax(100vh, auto) 12vh;
+        grid-template-areas: 
+            "header header header"  
+            "publication publication publication" 
+            "recent-posts recent-posts recent-posts" 
+            "footer footer footer"
+        ;
+        font-family: 'Source Sans Pro';
+    }
+
+    /***********************
+        Header
+    ************************/
+
+    .header { 
+        grid-area: header; 
+        padding: 0rem 3rem;
+        gap:1rem;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    .header img {
+        width:150px;
+    }
+
+    .header ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: start;
+        font-weight: bold;
+        padding:0;
+        margin:0;
+    }
+
+    .header ul li {
+        font-size: 1rem;
+    }
+
+    /***********************
+        Publication
+    ************************/
+
+    .publication { 
+        grid-area:publication; 
+        width:100%;
+        height:100%;
+        padding: 0rem 0 2rem 0;
+        border-bottom: 1px solid var(--gray-light);
+        margin-bottom: 1.5rem;
+    }
+
+    .publication header {
+        padding: 0;
+        width:100%;
+    }
+
+    .publication header .intro {
+        padding: 2rem 0;
+        margin:  0 auto;
+        width:90%;
+
+    }
+
+    .publication header .intro p {
+        margin: 0;
+    }
+
+    .publication header img {
+        background-color: black;
+        object-position: center;
+        object-fit: cover;
+        border-radius: 8px;
+        width: 95%;
+        height: 488px;
+        margin: 0 auto 3rem auto;
+        display: block;
+    }
+    
+    .publication header h1 {
+        font-weight: 800;
+        font-size:2.5rem;
+        color:var(--dark);
+        line-height: 1;
+        padding:0;
+        margin-top:0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .publication header time {
+        color:var(--darker);
+        margin:0;
+        padding:0;
+    }
+
+    .publication p {
+        padding:0;
+     
+        color:var(--darker);
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        width:70%;
+    }
+
+    .publication .content {
+        padding: 0;
+        width:90%;
+        margin: 0 auto;
+    }
+
+    .publication .content p {
+        width:100%;
+    }
+
+    .publication .content h2 {
+        font-weight: 800;
+        font-size:1.5rem;
+        color:var(--dark);
+        line-height: 1;
+        padding:0;
+        margin-top:1.5rem;
+        margin-bottom: 0rem;
+    }
+
+        
+    /***********************
+        Recent Posts
+    ************************/
+
+    .recent-posts { 
+        grid-area: recent-posts; 
+        padding:0 2rem;
+        width:100%;
+     
+    }
+
+    .recent-posts h1 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .posts {
+        width:100%;
+        min-height:80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .post {
+        width:290px;
+        height:70vh;
+        border-radius: 25px;
+        box-shadow: var(--shadow);
+    }
+
+    .post img {
+        width:100%;
+        height:50%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        object-fit: cover;
+        object-position: bottom;
+        transition: all 1s ease;
+    }
+
+    .post img:hover {
+        object-position: top;
+    }
+
+    .post time, .post h2, .post p {
+        padding:0 0.5rem;
+    }
+
+    .post time {
+        margin: 0;
+        font-size: 0.88rem;
+    }
+
+    .post h2 {
+        margin:0.3rem 0; 
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .post p {
+        margin:0;
+        font-size: 1rem;
+    }
+    
+
+    /***********************
+        Footer
+    ************************/
+
+    .footer { 
+        grid-area:footer; 
+        background-color: var(--dark);
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:whitesmoke;
+        font-size: 0.7rem;
+    }
+
+    .footer h2 {
+        color:white;
+        margin:0;
+        font-size: 1.1rem;
+    }
+
+
+}

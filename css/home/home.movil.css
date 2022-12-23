@@ -1,0 +1,149 @@
+
+@media(max-width:600px){
+
+    .home-container {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: 15vh 80vh minmax(70vh, auto) 15vh;
+        grid-template-areas: "header"  "hero" "posts" "footer";
+        font-family: 'Source Sans Pro';
+    }
+
+    /***********************
+        Header
+    ************************/
+
+    .header { 
+        grid-area: header; 
+        padding: 0rem 1rem;
+        gap:0.5rem;
+    }
+
+    .header img {
+        width:140px;
+    }
+
+    .header ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: start;
+        font-weight: bold;
+
+        padding:0;
+        margin:0;
+    }
+
+    .header ul li {
+        font-size: 0.7rem;
+    }
+
+    /***********************
+        Hero
+    ************************/
+
+    .hero { 
+        grid-area:hero; 
+        width:100%;
+        height:100%;
+        background-color: black;
+        background-image: url("../../img/article-image-hero.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-weight: 800;
+        font-size:2rem;
+        color:white;
+        line-height: 1;
+        padding:0;
+        margin-top:0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero time {
+        color:white;
+        margin:0;
+        padding:0;
+    }
+
+    .hero p {
+        padding:0;
+        margin:0;
+        color:white;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }
+
+    /***********************
+        Posts
+    ************************/
+
+    .posts { 
+        grid-area: posts; 
+        width:100%;
+        padding:2rem;
+    }
+
+    .post {
+        border-bottom: 1px solid var(--gray-light);
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .post:last-of-type {
+        border:none;
+    }
+
+    .post img {
+        width:100%;
+        height:40%;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        box-shadow:var(--shadow);
+    }
+
+    .post time {
+        margin: 0;
+        padding:0;
+        font-size: 0.88rem;
+    }
+
+    .post h2 {
+        padding:0;
+        margin:0.3rem 0; 
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .post p {
+        padding:0;
+        margin:0;
+    }
+
+    /***********************
+        Footer
+    ************************/
+
+    .footer { 
+        grid-area:footer; 
+        background-color: var(--dark);
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:whitesmoke;
+        font-size: 0.5rem;
+    }
+
+    .footer h2 {
+        color:white;
+        margin:0;
+    }
+
+}
