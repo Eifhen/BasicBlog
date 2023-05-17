@@ -111,7 +111,7 @@
     }
 
     .post {
-        width: 290px;
+        width: 350px;
         height:70vh;
         margin-bottom: 0.5rem;
         border-radius: 25px;
@@ -139,17 +139,21 @@
     .post time {
         margin: 0;
         font-size: 0.88rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
     }
 
     .post h2 {
         margin:0; 
         font-size: 1.5rem;
         font-weight: bolder;
+          padding-left: 1rem;
     }
 
     .post p {
         margin:0;
         font-size: 1rem;
+        padding-left: 1rem;
     }
 
 
