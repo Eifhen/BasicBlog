@@ -104,7 +104,7 @@
         margin:1rem auto;
         padding:2rem;
         display:flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap:1rem;
